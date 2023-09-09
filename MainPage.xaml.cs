@@ -2,23 +2,34 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
 	public MainPage()
 	{
-		InitializeComponent();
-	}
+        InitializeComponent();
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+        InitializeButton1Dice();
+        InitializeButton2Dices();
+    }
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+    private void InitializeButton1Dice()
+    {
+        btn1Dice.WidthRequest = DeviceDisplay.MainDisplayInfo.Width * 0.2;
+        btn1Dice.HeightRequest = DeviceDisplay.MainDisplayInfo.Height * 0.04;
+    }
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+    private void InitializeButton2Dices() 
+    {
+        btn2Dices.WidthRequest = DeviceDisplay.MainDisplayInfo.Width * 0.2;
+        btn2Dices.HeightRequest = DeviceDisplay.MainDisplayInfo.Height * 0.04;
+    }
+
+    private void Btn1Dice_Clicked(object sender, EventArgs e)
+    {
+        //Application.Current.MainPage = new OneDicePage();
+    }
+
+    private void Btn2Dices_Clicked(object sender, EventArgs e)
+    {
+        //Application.Current.MainPage = new TwoDicesPage();
+    }
 }
 
