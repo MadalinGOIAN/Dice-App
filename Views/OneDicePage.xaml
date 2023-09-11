@@ -38,6 +38,6 @@
                 BackgroundColor="#512BD4"
                 VerticalOptions="Start"
                 Margin="60"
-                Clicked="BtnRoll_Clicked"/>
+                Clicked="ButtonRoll_Clicked"/>
     </Grid>
 </ContentPage>

@@ -3,10 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Dice_App.Views.TwoDicesPage"
              Title="TwoDicesPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="2 Dices"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ImageButton Source="return_button.png"
+                     Grid.Row="0"
+                     Grid.Column="0"
+                     HorizontalOptions="End"
+                     VerticalOptions="Start"
+                     Margin="0,80,36,0"
+                     Clicked="ImageButtonReturn_Clicked"/>
+
+        <Image x:Name="imgDice1"
+               Source="dice_face_1.png"
+               Grid.Row="1"
+               Grid.Column="0"
+               HeightRequest="120"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+        <Image x:Name="imgDice2"
+               Source="dice_face_1.png"
+               Grid.Row="2"
+               Grid.Column="0"
+               HeightRequest="120"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               Margin="0"/>
+
+        <Button Grid.Row="3"
+                Grid.Column="0"
+                Text="Roll"
+                FontSize="32"
+                BackgroundColor="#512BD4"
+                VerticalOptions="Start"
+                Margin="60,0"
+                Clicked="ButtonRoll_Clicked"/>
+    </Grid>
 </ContentPage>

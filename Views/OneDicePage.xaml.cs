@@ -4,7 +4,11 @@ namespace Dice_App.Views;
 
 public partial class OneDicePage : ContentPage
 {
-	public OneDicePage()
+    private static readonly Random randomNumberGenerator = new Random();
+    
+    private int RandomDiceFace { get => randomNumberGenerator.Next(1, 7); }
+
+    public OneDicePage()
 	{
 		InitializeComponent();
 	}
@@ -14,9 +18,8 @@ public partial class OneDicePage : ContentPage
 		Application.Current.MainPage = new MainPage();
     }
 
-    private void BtnRoll_Clicked(object sender, EventArgs e)
+    private void ButtonRoll_Clicked(object sender, EventArgs e)
     {
-        int randomDiceFace = new Random().Next(1, 7);
-        imgDice.Source = $"dice_face_{randomDiceFace}.png";
+        imgDice.Source = $"dice_face_{RandomDiceFace}.png";
     }
 }
