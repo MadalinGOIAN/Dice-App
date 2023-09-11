@@ -18,7 +18,16 @@ public partial class TwoDicesPage : ContentPage
 
     private void ButtonRoll_Clicked(object sender, EventArgs e)
     {
-        imgDice1.Source = $"dice_face_{RandomDiceFace}.png";
-        imgDice2.Source = $"dice_face_{RandomDiceFace}.png";
+        AnimateDiceRoll(imgDice1);
+        AnimateDiceRoll(imgDice2);
+    }
+
+    private async void AnimateDiceRoll(Image imgDice)
+    {
+        for (int degrees = 72; degrees <= 360; degrees += 72)
+        {
+            await Microsoft.Maui.Controls.ViewExtensions.RotateTo(imgDice, degrees);
+            imgDice.Source = $"dice_face_{RandomDiceFace}.png";
+        }
     }
 }
