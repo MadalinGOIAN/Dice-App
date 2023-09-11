@@ -1,3 +1,4 @@
+using Java.Time.Temporal;
 using Microsoft.Maui.Controls;
 
 namespace Dice_App.Views;
@@ -20,6 +21,15 @@ public partial class OneDicePage : ContentPage
 
     private void ButtonRoll_Clicked(object sender, EventArgs e)
     {
-        imgDice.Source = $"dice_face_{RandomDiceFace}.png";
+        AnimateDiceRoll();
+    }
+
+    private async void AnimateDiceRoll()
+    {
+        for (int degrees = 72; degrees <= 360; degrees += 72)
+        {
+            await Microsoft.Maui.Controls.ViewExtensions.RotateTo(imgDice, degrees);
+            imgDice.Source = $"dice_face_{RandomDiceFace}.png";
+        }
     }
 }
