@@ -3,34 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Dice_App.Views.MainPage">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+    <VerticalStackLayout Padding="75"
+                         Spacing="48"
+                         VerticalOptions="Center">
 
         <Button x:Name="btn1Dice"
                 Text="1 Dice"
                 FontSize="32"
                 BackgroundColor="#512BD4"
-                Grid.Row="0"
-                Grid.Column="0"
-                VerticalOptions="End"
-                Margin="24"
+                HeightRequest="85"
                 Clicked="Btn1Dice_Clicked"/>
 
         <Button x:Name="btn2Dices"
                 Text="2 Dices"
                 FontSize="32"
                 BackgroundColor="#512BD4"
-                Grid.Row="1"
-                Grid.Column="0"
-                VerticalOptions="Start"
-                Margin="24"
+                HeightRequest="85"
                 Clicked="Btn2Dices_Clicked"/>
-    </Grid>
+    </VerticalStackLayout>
 </ContentPage>
