@@ -4,11 +4,10 @@
              x:Class="Dice_App.Views.OneDicePage"
              Title="OneDicePage">
 
-    <VerticalStackLayout Padding="36,80"
-                         Spacing="155"
+    <VerticalStackLayout Spacing="150"
                          VerticalOptions="Start">
 
-        <ImageButton Padding="0,0,0,50"
+        <ImageButton Padding="0,80,20,0"
                      Source="return_button.png"
                      Clicked="ImageButtonReturn_Clicked"
                      HorizontalOptions="End"/>
@@ -19,6 +18,7 @@
         <Button Text="Roll"
                 FontSize="32"
                 BackgroundColor="#512BD4"
+                Margin="25"
                 Clicked="ButtonRoll_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
