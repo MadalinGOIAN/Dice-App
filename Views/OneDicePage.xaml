@@ -7,7 +7,7 @@
     <VerticalStackLayout Spacing="150"
                          VerticalOptions="Start">
 
-        <ImageButton Padding="0,80,20,0"
+        <ImageButton Margin="0,80,36,0"
                      Source="return_button.png"
                      Clicked="ImageButtonReturn_Clicked"
                      HorizontalOptions="End"/>
